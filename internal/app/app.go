@@ -34,14 +34,6 @@ func RunApp() {
 		handlers.UpBalance(c, PgClient)
 	})
 
-	// c.ShouldBindJSON(&person)
-
-	// query := fmt.Sprintf("INSERT INTO user_balance (user_id, name, adress, balance) VALUES ('%d', '%s', '%s', '%d')",
-	// 	person.User_id, person.Name, person.Address, person.Balance)
-
-	// PgClient.QueryRow(context.Background(), query).Scan()
-	// fmt.Println(person.User_id)
-
 	r.GET("/get_service", func(c *gin.Context) {
 		handlers.GetService(c, PgClient)
 	})
